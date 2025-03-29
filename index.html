@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Geometry Learn V4</title>
-    <link rel="stylesheet" href="assets/var/css/main.css">
+    <link rel="stylesheet" href="/assets/var/css/main.css">
 </head>
 <body>
     <header class="main-header">
@@ -13,9 +13,9 @@
         </a>
         <div class="search-container">
             <div class="search-bar">
-                <img src="assets/img/essential/searchicon24x.png" alt="Search" class="search-icon">
+                <img src="/assets/img/essential/searchicon24x.png" alt="Search" class="search-icon">
                 <input type="text" placeholder="Search..." class="search-input">
-                <img src="assets/img/essential/clearbtn24x.png" alt="Clear" class="clear-icon">
+                <img src="/assets/img/essential/clearbtn24x.png" alt="Clear" class="clear-icon">
             </div>
         </div>
         <div class="header-actions">
@@ -26,8 +26,8 @@
     <div class="sidebar">
         <div class="top-links">
             <ul>
-                <li onclick="navigate('new.html')"><img src="assets/img/essential/newbtn24x.png" alt=""> New</li>
-                <li onclick="navigate('popular.html')"><img src="assets/img/essential/popularbtn24x.png" alt=""> Popular</li>
+                <li onclick="navigate('new.html')"><img src="/assets/img/essential/newbtn24x.png" alt=""> New</li>
+                <li onclick="navigate('popular.html')"><img src="/assets/img/essential/popularbtn24x.png" alt=""> Popular</li>
             </ul>
         </div>
         
@@ -35,9 +35,9 @@
         
         <div class="scrollable">
             <ul>
-                <li onclick="navigate('categories.html')"><img src="assets/img/essential/allcategory24x.png" alt=""> All categories</li>
-                <li onclick="navigate('simulators.html')"><img src="assets/img/essential/simulatorsbtn24x.png" alt=""> Simulators</li>
-                <li onclick="navigate('racing.html')"><img src="assets/img/essential/racingbtn24x.png" alt=""> Racing</li>
+                <li onclick="navigate('categories.html')"><img src="/assets/img/essential/allcategory24x.png" alt=""> All categories</li>
+                <li onclick="navigate('simulators.html')"><img src="/assets/img/essential/simulatorsbtn24x.png" alt=""> Simulators</li>
+                <li onclick="navigate('racing.html')"><img src="/assets/img/essential/racingbtn24x.png" alt=""> Racing</li>
                 <li onclick="navigate('adventure.html')"><img src="icons/adventure.png" alt=""> Adventure</li>
                 <li onclick="navigate('action.html')"><img src="icons/action.png" alt=""> Action</li>
                 <li onclick="navigate('puzzles.html')"><img src="icons/puzzles.png" alt=""> Puzzles</li>
@@ -70,25 +70,17 @@
         <div id="popular-section">
             <h2 class="section-title">Popular Games</h2>
             <div class="games-grid" id="popular-games">
-                <!-- Popular games will be loaded here -->
             </div>
         </div>
         
         <div id="new-section">
             <h2 class="section-title">New Releases</h2>
             <div class="games-grid" id="new-games">
-                <!-- New games will be loaded here -->
             </div>
         </div>
-        
-        <!-- Search results will be dynamically added here when needed -->
     </div>
-
-    <!-- Main script -->
     <script src="assets/var/js/main.js"></script>
-    
-    <!-- Game content scripts -->
-    <script src="assets/var/js/popularcontent.js"></script>
-    <script src="assets/var/js/newcontent.js"></script>
+    <script src="/assets/var/js/popularcontent.js"></script>
+    <script src="/assets/var/js/newcontent.js"></script>
 </body>
 </html>
