@@ -1,0 +1,51 @@
+[
+    {
+      "id": "game9",
+      "title": "Cyber Racer 2023",
+      "category": "Racing",
+      "thumbnail": "assets/images/games/cyber-racer.jpg"
+    },
+    {
+      "id": "game10",
+      "title": "Monster Hunter",
+      "category": "Action",
+      "thumbnail": "assets/images/games/monster-hunter.jpg"
+    },
+    {
+      "id": "game11",
+      "title": "City Builder Pro",
+      "category": "Simulator",
+      "thumbnail": "assets/images/games/city-builder.jpg"
+    },
+    {
+      "id": "game12",
+      "title": "Color Match",
+      "category": "Puzzle",
+      "thumbnail": "assets/images/games/color-match.jpg"
+    },
+    {
+      "id": "game13",
+      "title": "Treasure Island",
+      "category": "Adventure",
+      "thumbnail": "assets/images/games/treasure-island.jpg"
+    },
+    {
+      "id": "game14",
+      "title": "Basketball Stars",
+      "category": "Sports",
+      "thumbnail": "assets/images/games/basketball-stars.jpg"
+    },
+    {
+      "id": "game15",
+      "title": "Medieval Conquest",
+      "category": "Strategy",
+      "thumbnail": "assets/images/games/medieval-conquest.jpg"
+    },
+    {
+      "id": "game16",
+      "title": "Abandoned Asylum",
+      "category": "Horror",
+      "thumbnail": "assets/images/games/abandoned-asylum.jpg"
+    }
+  ]
+  
