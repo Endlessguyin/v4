@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Custom Loading Screen</title>
+    <style>
+      /* Basic reset */
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      /* Loader overlay styles */
+      #loader {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        background: linear-gradient(135deg, #ff6b6b, #5f27cd);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        z-index: 9999;
+        color: #fff;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      }
+
+      /* Progress bar container */
+      .progress-bar {
+        width: 80%;
+        max-width: 400px;
+        background: rgba(255, 255, 255, 0.3);
+        border-radius: 20px;
+        overflow: hidden;
+        margin-top: 20px;
+      }
+
+      /* Progress bar filler */
+      .progress-bar-inner {
+        height: 20px;
+        width: 0;
+        background: #fff;
+        border-radius: 20px;
+        transition: width 0.3s ease;
+      }
+
+      /* Percentage text */
+      .percentage {
+        font-size: 2rem;
+        font-weight: bold;
+      }
+
+      /* Content styles (initially hidden) */
+      #content {
+        display: none;
+        padding: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Loader overlay -->
+    <div id="loader">
+      <div class="percentage" id="percent">0%</div>
+      <div class="progress-bar">
+        <div class="progress-bar-inner" id="progress"></div>
+      </div>
+      <p style="margin-top: 10px;">Loading, please wait...</p>
+    </div>
+
+    <!-- Main content -->
+    <div id="content">
+      <h1>Welcome to My Website</h1>
+      <p>
+        This is your awesome content! Enjoy exploring the site.
+      </p>
+      <!-- Add additional content here -->
+    </div>
+
+    <script>
+      // Simulate a loading progress
+      let progress = 0;
+      const progressBar = document.getElementById("progress");
+      const percentText = document.getElementById("percent");
+      const loader = document.getElementById("loader");
+      const content = document.getElementById("content");
+
+      const interval = setInterval(() => {
+        // Increase progress by a random value between 1 and 10
+        progress += Math.floor(Math.random() * 10) + 1;
+        if (progress >= 100) {
+          progress = 100;
+          clearInterval(interval);
+          percentText.textContent = progress + "%";
+          progressBar.style.width = progress + "%";
+
+          // Fade out the loader after a brief delay
+          setTimeout(() => {
+            loader.style.transition = "opacity 0.5s ease";
+            loader.style.opacity = "0";
+            setTimeout(() => {
+              loader.style.display = "none";
+              content.style.display = "block";
+            }, 500);
+          }, 500);
+        } else {
+          percentText.textContent = progress + "%";
+          progressBar.style.width = progress + "%";
+        }
+      }, 300);
+    </script>
+  </body>
+</html>

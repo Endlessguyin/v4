@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/assets/var/css/main.css">
+    <link rel="stylesheet" href="/assets/var/css/content.css">
+    <link rel="stylesheet" href="/assets/var/css/game-iframe.css">
+</head>
+<body>
+    <div id="game-details">
+        <div class="game-header">
+            <div class="game-thumbnail-container">
+                <img src="/assets/img/applications-img/blacktop-police-chase.png" alt="" class="game-detail-thumbnail">
+            </div>
+            <div class="game-info-container">
+                <h1 class="game-detail-title">Blacktop: Police Chase</h1>
+                <p class="game-detail-category">Casual Driving</p>
+                <button id="play-game-btn" class="play-button" data-game-url="/assets/applications/content/blacktop-police-chase/">Play Now</button>
+            </div>
+        </div>
+        
+        <div class="game-description">
+            <h2>About This Game</h2>
+            <p>Blacktop: Police Chase throws you into a wild, tire-screeching getaway as you dodge traffic, outmaneuver cops, and leave chaos in your rearview mirror. It’s fast, furious, and the road is your only escape—how long can you outrun the law?</p>
+        </div>
+        
+        <div class="screenshots-section">
+            <h2>Screenshots</h2>
+            <div class="screenshots-container">
+                <div class="main-screenshot">
+                    <img src="/assets/img/applications-screenshots/blacktop-police-chase/1.png" alt="">
+                </div>
+                <div class="thumbnail-column">
+                    <img src="/assets/img/applications-screenshots/blacktop-police-chase/2.png" alt="">
+                    <img src="/assets/img/applications-screenshots/blacktop-police-chase/3.png" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="fullscreen-iframe-container" class="hidden">
+        <button id="close-iframe-btn" class="close-button">&times;</button>
+        <iframe id="game-iframe"></iframe>
+    </div>
+
+    <script src="/assets/var/js/game-iframe.js"></script>
+    <script src="/assets/var/js/deload.js"></script>
+    <script src="/assets/var/js/preferences.js"></script>
+</body>
+</html>

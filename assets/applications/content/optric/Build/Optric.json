@@ -1,0 +1,16 @@
+{
+"companyName": "bush",
+"productName": "Optric",
+"productVersion": "0.1",
+"dataUrl": "Optric.data.unityweb",
+"wasmCodeUrl": "Optric.wasm.code.unityweb",
+"wasmFrameworkUrl": "Optric.wasm.framework.unityweb",
+"graphicsAPI": ["WebGL 2.0"],
+"webglContextAttributes": {"preserveDrawingBuffer": false},
+"splashScreenStyle": "Dark",
+"backgroundColor": "#231F20",
+"cacheControl": {"default": "must-revalidate"},
+"developmentBuild": false,
+"multithreading": false,
+"unityVersion": "2019.3.5f1"
+}

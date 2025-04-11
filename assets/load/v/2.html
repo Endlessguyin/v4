@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Orbiting Planets Loading Screen</title>
+    <style>
+      /* Basic Reset */
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        background: #0d0d0d;
+        font-family: Arial, sans-serif;
+        overflow: hidden;
+      }
+
+      /* Loader Overlay */
+      #loader {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        background: #0d0d0d;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        z-index: 10000;
+      }
+
+      /* Solar System Container */
+      .system {
+        position: relative;
+        width: 160px;
+        height: 160px;
+        margin-bottom: 20px;
+      }
+
+      /* Sun in the Center */
+      .sun {
+        width: 30px;
+        height: 30px;
+        background: #ffd700;
+        border-radius: 50%;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        box-shadow: 0 0 10px 2px #ffd700;
+      }
+
+      /* Orbit Container Style */
+      .orbit {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        border: 1px dashed rgba(255, 255, 255, 0.2);
+        border-radius: 50%;
+      }
+
+      /* Planet Style */
+      .orbit .planet {
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%, 0);
+      }
+
+      /* Orbit 1 Settings */
+      .orbit.orbit1 {
+        width: 80px;
+        height: 80px;
+        margin-left: -40px;
+        margin-top: -40px;
+        animation: rotate 8s linear infinite;
+      }
+      .orbit.orbit1 .planet {
+        background: #ff6f61;
+        box-shadow: 0 0 5px #ff6f61;
+      }
+
+      /* Orbit 2 Settings */
+      .orbit.orbit2 {
+        width: 110px;
+        height: 110px;
+        margin-left: -55px;
+        margin-top: -55px;
+        animation: rotate 12s linear infinite reverse;
+      }
+      .orbit.orbit2 .planet {
+        background: #6fcf97;
+        box-shadow: 0 0 5px #6fcf97;
+      }
+
+      /* Orbit 3 Settings */
+      .orbit.orbit3 {
+        width: 140px;
+        height: 140px;
+        margin-left: -70px;
+        margin-top: -70px;
+        animation: rotate 16s linear infinite;
+      }
+      .orbit.orbit3 .planet {
+        background: #56ccf2;
+        box-shadow: 0 0 5px #56ccf2;
+      }
+
+      @keyframes rotate {
+        from {
+          transform: rotate(0deg);
+        }
+        to {
+          transform: rotate(360deg);
+        }
+      }
+
+      /* Loading Text Styling */
+      .loading-text {
+        color: #fff;
+        font-size: 1.2rem;
+        letter-spacing: 0.1em;
+        animation: pulseText 1.5s infinite;
+      }
+
+      @keyframes pulseText {
+        0%,
+        100% {
+          opacity: 0.8;
+        }
+        50% {
+          opacity: 1;
+        }
+      }
+
+      /* Main Content (Hidden Initially) */
+      #content {
+        display: none;
+        padding: 20px;
+        color: #fff;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Loader Overlay -->
+    <div id="loader">
+      <div class="system">
+        <div class="sun"></div>
+        <div class="orbit orbit1">
+          <div class="planet"></div>
+        </div>
+        <div class="orbit orbit2">
+          <div class="planet"></div>
+        </div>
+        <div class="orbit orbit3">
+          <div class="planet"></div>
+        </div>
+      </div>
+      <div class="loading-text">Loading...</div>
+    </div>
+
+    <!-- Main Content -->
+    <div id="content">
+      <h1>Welcome to My Website!</h1>
+      <p>This is your main content. Enjoy exploring our site!</p>
+    </div>
+
+    <script>
+      // Once the window loads, fade out the loader and reveal the main content.
+      window.addEventListener("load", function () {
+        // Optional simulated delay
+        setTimeout(function () {
+          const loader = document.getElementById("loader");
+          loader.style.transition = "opacity 0.8s ease";
+          loader.style.opacity = "0";
+          setTimeout(() => {
+            loader.style.display = "none";
+            document.getElementById("content").style.display = "block";
+            // Restore scrolling once content is visible
+            document.body.style.overflow = "auto";
+          }, 800);
+        }, 1500);
+      });
+    </script>
+  </body>
+</html>

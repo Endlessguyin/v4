@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <h1>Settings</h1>
+      </header>
+      <main class="settings-panel">
+        <div class="setting-item">
+          <div class="setting-info">
+            <h2>Website Theme</h2>
+            <p>Choose between Light or Dark mode</p>
+          </div>
+          <div class="setting-control">
+            <div class="theme-toggle">
+              <input type="radio" id="light" name="theme" value="light" />
+              <label for="light">Light</label>
+              <input type="radio" id="dark" name="theme" value="dark" />
+              <label for="dark">Dark</label>
+            </div>
+          </div>
+        </div>
+
+        <div class="setting-item">
+          <div class="setting-info">
+            <h2>Website Cloaker</h2>
+            <p>
+              Cloak the website's favicon and title or enter a Favicon URL and Title
+              name.
+            </p>
+          </div>
+          <div class="setting-control">
+            <input type="text" id="faviconUrl" placeholder="Favicon URL" />
+            <input type="text" id="websiteTitle" placeholder="Website Title" />
+            <div class="template-buttons" id="templateButtons"></div>
+            <div class="btn-group">
+              <button id="saveFaviconTitle" class="btn-primary">Save</button>
+              <button id="resetFaviconTitle" class="btn-secondary">
+                Reset
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="setting-item">
+          <div class="setting-info">
+            <h2>Panic Keys</h2>
+            <p>
+              Define a key sequence (maximum 3 keys) and a URL to redirect when
+              activated.
+            </p>
+          </div>
+          <div class="setting-control">
+            <input
+              type="text"
+              id="panicKeys"
+              placeholder="Press keys (e.g., Ctrl + I)"
+            />
+            <input type="text" id="panicUrl" placeholder="Redirect URL" />
+            <div class="btn-group">
+              <button id="savePanicKeys" class="btn-primary">Save</button>
+              <button id="resetPanicKeys" class="btn-secondary">Reset</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="setting-item">
+          <div class="setting-info">
+            <h2>Anticlose</h2>
+            <p>Prevent closing pages accidentally.</p>
+          </div>
+          <div class="setting-control">
+            <button id="anticloseToggle" class="btn-anticlose">OFF</button>
+          </div>
+        </div>
+      </main>
+    </div>
+
+    <div class="tiny-text">V1.2.716.0922 BETA - 6ebdf</div>
+
+    <div id="resetPopup" class="popup-overlay">
+      <div class="popup-content">
+        <p>Are you sure you want to reset your setting?</p>
+        <label>
+          <input type="checkbox" id="popupDisableCheckbox" />
+          Do Not Show Me This For 3 Days
+        </label>
+        <div class="popup-buttons">
+          <button id="popupConfirm" class="btn-primary-popup">
+            Yes, Reset
+          </button>
+          <button id="popupCancel" class="btn-secondary-popup">Cancel</button>
+        </div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

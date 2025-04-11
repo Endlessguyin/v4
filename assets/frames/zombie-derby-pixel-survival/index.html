@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/assets/var/css/main.css">
+    <link rel="stylesheet" href="/assets/var/css/content.css">
+    <link rel="stylesheet" href="/assets/var/css/game-iframe.css">
+</head>
+<body>
+    <div id="game-details">
+        <div class="game-header">
+            <div class="game-thumbnail-container">
+                <img src="/assets/img/applications-img/zombie-derby-pixel-survival.png" alt="" class="game-detail-thumbnail">
+            </div>
+            <div class="game-info-container">
+                <h1 class="game-detail-title">Zombie Derby: Pixel Survival</h1>
+                <p class="game-detail-category">Casual</p>
+                <button id="play-game-btn" class="play-button" data-game-url="/assets/applications/content/zombie-derby-pixel-survival/">Play Now</button>
+            </div>
+        </div>
+        
+        <div class="game-description">
+            <h2>About This Game</h2>
+            <p>Zombie Derby: Pixel Survival is an action-packed game that combines driving with zombie destruction. Players navigate through chaotic levels, crushing hordes of zombies and blowing up obstacles. The game features a variety of vehicles, including an ice-cream truck, a buggy, and even a tank, which can be upgraded with weapons and nitro boosts to enhance survival chances.</p>
+        </div>
+        
+        <div class="screenshots-section">
+            <h2>Screenshots</h2>
+            <div class="screenshots-container">
+                <div class="main-screenshot">
+                    <img src="/assets/img/applications-screenshots/zombie-derby-pixel-survival/1.png" alt="">
+                </div>
+                <div class="thumbnail-column">
+                    <img src="/assets/img/applications-screenshots/zombie-derby-pixel-survival/2.png" alt="">
+                    <img src="/assets/img/applications-screenshots/zombie-derby-pixel-survival/3.png" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="fullscreen-iframe-container" class="hidden">
+        <button id="close-iframe-btn" class="close-button">&times;</button>
+        <iframe id="game-iframe"></iframe>
+    </div>
+
+    <script src="/assets/var/js/game-iframe.js"></script>
+    <script src="/assets/var/js/deload.js"></script>
+    <script src="/assets/var/js/preferences.js"></script>
+</body>
+</html>

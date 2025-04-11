@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/assets/var/css/main.css">
+    <link rel="stylesheet" href="/assets/var/css/content.css">
+    <link rel="stylesheet" href="/assets/var/css/game-iframe.css">
+</head>
+<body>
+    <div id="game-details">
+        <div class="game-header">
+            <div class="game-thumbnail-container">
+                <img src="/assets/img/applications-img/indian-truck-driving.png" alt="" class="game-detail-thumbnail">
+            </div>
+            <div class="game-info-container">
+                <h1 class="game-detail-title">Indian Truck Driving</h1>
+                <p class="game-detail-category">Casual Driving</p>
+                <button id="play-game-btn" class="play-button" data-game-url="/assets/applications/content/indian-truck-driving/">Play Now</button>
+            </div>
+        </div>
+        
+        <div class="game-description">
+            <h2>About This Game</h2>
+            <p>Indian Truck Driving is a realistic truck simulation game that puts you behind the wheel of powerful cargo trucks. Navigate through diverse landscapes, from bustling cities to rugged mountain roads, while delivering goods safely to their destinations. The game features dynamic weather, challenging terrain, and authentic truck physics, making every journey an immersive experience. Upgrade your trucks, take on new missions, and master the art of driving heavy vehicles through tricky turns and narrow paths.</p>
+        </div>
+        
+        <div class="screenshots-section">
+            <h2>Screenshots</h2>
+            <div class="screenshots-container">
+                <div class="main-screenshot">
+                    <img src="/assets/img/applications-screenshots/indian-truck-driving/1.png" alt="">
+                </div>
+                <div class="thumbnail-column">
+                    <img src="/assets/img/applications-screenshots/indian-truck-driving/2.png" alt="">
+                    <img src="/assets/img/applications-screenshots/indian-truck-driving/3.png" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="fullscreen-iframe-container" class="hidden">
+        <button id="close-iframe-btn" class="close-button">&times;</button>
+        <iframe id="game-iframe"></iframe>
+    </div>
+
+    <script src="/assets/var/js/game-iframe.js"></script>
+    <script src="/assets/var/js/deload.js"></script>
+    <script src="/assets/var/js/preferences.js"></script>
+</body>
+</html>

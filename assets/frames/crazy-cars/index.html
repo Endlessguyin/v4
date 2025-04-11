@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/assets/var/css/main.css">
+    <link rel="stylesheet" href="/assets/var/css/content.css">
+    <link rel="stylesheet" href="/assets/var/css/game-iframe.css">
+</head>
+<body>
+    <div id="game-details">
+        <div class="game-header">
+            <div class="game-thumbnail-container">
+                <img src="/assets/img/applications-img/crazy-cars.png" alt="" class="game-detail-thumbnail">
+            </div>
+            <div class="game-info-container">
+                <h1 class="game-detail-title">Crazy Cars!</h1>
+                <p class="game-detail-category">Casual Driving</p>
+                <button id="play-game-btn" class="play-button" data-game-url="/assets/applications/content/crazy-cars/">Play Now</button>
+            </div>
+        </div>
+        
+        <div class="game-description">
+            <h2>About This Game</h2>
+            <p>Get ready for Crazy Cars!, a wild ride where speed meets chaos! Developed by No Pressure Studios, this fast-paced racing game takes you on a thrilling adventure through zany tracks filled with unexpected twists and turns. Forget about boring, realistic racing; here, it’s all about having fun, pulling off insane stunts, and dodging crazy obstacles.</p>
+        </div>
+        
+        <div class="screenshots-section">
+            <h2>Screenshots</h2>
+            <div class="screenshots-container">
+                <div class="main-screenshot">
+                    <img src="/assets/img/applications-screenshots/crazy-cars/1.png" alt="">
+                </div>
+                <div class="thumbnail-column">
+                    <img src="/assets/img/applications-screenshots/crazy-cars/2.png" alt="">
+                    <img src="/assets/img/applications-screenshots/crazy-cars/3.png" alt="">
+                    <img src="/assets/img/applications-screenshots/crazy-cars/4.png" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="fullscreen-iframe-container" class="hidden">
+        <button id="close-iframe-btn" class="close-button">&times;</button>
+        <iframe id="game-iframe"></iframe>
+    </div>
+
+    <script src="/assets/var/js/game-iframe.js"></script>
+    <script src="/assets/var/js/deload.js"></script>
+    <script src="/assets/var/js/preferences.js"></script>
+</body>
+</html>

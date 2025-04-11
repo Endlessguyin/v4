@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/assets/var/css/main.css">
+    <link rel="stylesheet" href="/assets/var/css/content.css">
+    <link rel="stylesheet" href="/assets/var/css/game-iframe.css">
+</head>
+<body>
+    <div id="game-details">
+        <div class="game-header">
+            <div class="game-thumbnail-container">
+                <img src="/assets/img/applications-img/block-tech.png" alt="" class="game-detail-thumbnail">
+            </div>
+            <div class="game-info-container">
+                <h1 class="game-detail-title">Block Tech: Epic Sandbox</h1>
+                <p class="game-detail-category">Sandbox</p>
+                <button id="play-game-btn" class="play-button" data-game-url="/assets/applications/content/block-tech/">Play Now</button>
+            </div>
+        </div>
+        
+        <div class="game-description">
+            <h2>About This Game</h2>
+            <p>Block Tech: Epic Sandbox is a physics-based building game where players can construct, modify, and experiment with various structures, vehicles, and mechanisms. Featuring a vast open environment, the game allows for creativity and engineering challenges, enabling users to build anything from simple machines to complex, functional contraptions. With realistic physics and interactive components, players can test their creations in different scenarios, making it a dynamic and engaging sandbox experience.</p>
+        </div>
+        
+        <div class="screenshots-section">
+            <h2>Screenshots</h2>
+            <div class="screenshots-container">
+                <div class="main-screenshot">
+                    <img src="/assets/img/applications-screenshots/block-tech/1.png" alt="">
+                </div>
+                <div class="thumbnail-column">
+                    <img src="/assets/img/applications-screenshots/block-tech/2.png" alt="">
+                    <img src="/assets/img/applications-screenshots/block-tech/3.png" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="fullscreen-iframe-container" class="hidden">
+        <button id="close-iframe-btn" class="close-button">&times;</button>
+        <iframe id="game-iframe"></iframe>
+    </div>
+
+    <script src="/assets/var/js/game-iframe.js"></script>
+    <script src="/assets/var/js/deload.js"></script>
+    <script src="/assets/var/js/preferences.js"></script>
+</body>
+</html>
