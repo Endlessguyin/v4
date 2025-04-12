@@ -1,29 +1,28 @@
 <!DOCTYPE html>
-
 <html>
 <head>
-  <link rel="manifest" href="manifest.json" />
   <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+  <link rel="manifest" href="manifest.json">
 
-<style>
-.track-selection .category-container > button.official::before {
-	background-image: url(images/official_tracks.jpg);
-}
-.track-selection .category-container > button.community::before {
-	background-image: url(images/community_tracks.jpg);
-}
-.track-selection .category-container > button.custom::before {
-	background-image: url(images/custom_tracks.jpg);
-}
-@font-face {
-	font-family: ForcedSquare;
-	src:
-		url(a82f15d48dbc61b6edeb.woff2) format("woff2"),
-		url(2e5b7bff10d7782e539c.woff) format("woff"),
-		url(4e75ed8189c5a7b6fbf8.ttf) format("truetype");
-}
-<style>
+  <style>
+    @font-face {
+      font-family: 'ForcedSquare';
+      src:
+        url('a82f15d48dbc61b6edeb.woff2') format('woff2'),
+        url('2e5b7bff10d7782e539c.woff') format('woff'),
+        url('4e75ed8189c5a7b6fbf8.ttf') format('truetype');
+    }
 
+    .track-selection .category-container > button.official::before {
+      background-image: url('images/official_tracks.jpg');
+    }
+    .track-selection .category-container > button.community::before {
+      background-image: url('images/community_tracks.jpg');
+    }
+    .track-selection .category-container > button.custom::before {
+      background-image: url('images/custom_tracks.jpg');
+    }
+  </style>
 </head>
 
 <body>
