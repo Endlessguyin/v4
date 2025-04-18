@@ -1,13 +1,13 @@
 (function() {
     let script = document.createElement('script');
     script.async = true;
-    script.src = "https://www.googletagmanager.com/gtag/js?id=G-R124MMCBQT";
+    script.src = "https://www.googletagmanager.com/gtag/js?id=G-C1EPSYCF6Z";
     script.onload = function() {
         window.dataLayer = window.dataLayer || [];
         function gtag(){ dataLayer.push(arguments); }
         window.gtag = gtag;
         gtag('js', new Date());
-        gtag('config', 'G-R124MMCBQT');
+        gtag('config', 'G-C1EPSYCF6Z');
     };
     document.head.appendChild(script);
 })();

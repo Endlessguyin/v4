@@ -128,7 +128,13 @@ body {
   height: 100%;
   font-size: 14px;
   outline: none;
+  color: var(--primary-text);
 }
+
+.search-input::placeholder {
+  color: var(--secondary-text);
+}
+
 
 .clear-icon {
   width: 16px;
@@ -329,7 +335,8 @@ body {
   right: 0;
   bottom: 0;
   pointer-events: none;
-  background-size: 0 4px, 4px 0, 0 4px, 4px 0, 0 4px, 4px 0, 0 4px, 4px 0;
+  background-size: 0 4px, 4px 0, 0 4px, 4px 0, 0 4px, 4px 0, 0 4px,
+    4px 0;
   transition: background-size 0.3s ease;
 }
 
@@ -348,6 +355,7 @@ body {
   padding: 10px;
 }
 
+/* Keep these as you had them */
 .game-title {
   font-size: 14px;
   font-weight: 600;
@@ -482,10 +490,6 @@ body {
 }
 
 @keyframes spin {
-  0% {
-    transform: translate(-50%, -50%) rotate(0deg);
-  }
-  100% {
-    transform: translate(-50%, -50%) rotate(360deg);
-  }
+  0% { transform: translate(-50%, -50%) rotate(0deg); }
+  100% { transform: translate(-50%, -50%) rotate(360deg); }
 }

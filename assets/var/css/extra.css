@@ -1,0 +1,117 @@
+:root {
+    --background-color: #f9f9f9;
+    --text-color: #333;
+    --heading-color: #333;
+    --subtitle-color: #666;
+    --card-background: white;
+    --card-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    --card-hover-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+    --h2-color: #444;
+    --p-color: #666;
+    --button-bg: #4fc3f7;
+    --button-hover-bg: #3fb3e7;
+    --divider-gradient: linear-gradient(to right, transparent, #4fc3f7, transparent);
+}
+
+[data-theme="dark"] {
+    --background-color: #1a1a1a;
+    --text-color: #cccccc;
+    --heading-color: #e0e0e0;
+    --subtitle-color: #aaaaaa;
+    --card-background: #2c2c2c;
+    --card-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    --card-hover-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+    --h2-color: #d0d0d0;
+    --p-color: #aaaaaa;
+    --button-bg: #3fb3e7;
+    --button-hover-bg: #2fa3d7;
+    --divider-gradient: linear-gradient(to right, transparent, #3fb3e7, transparent);
+}
+
+body {
+    background-color: var(--background-color);
+    color: var(--text-color);
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 40px 20px;
+    line-height: 1.6;
+    text-align: center;
+}
+
+h1 {
+    color: var(--heading-color);
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    position: relative;
+    display: inline-block;
+}
+
+h1:after {
+    content: '';
+    position: absolute;
+    width: 50%;
+    height: 3px;
+    background: #4fc3f7;
+    bottom: -10px;
+    left: 25%;
+    border-radius: 3px;
+}
+
+.subtitle {
+    color: var(--subtitle-color);
+    font-size: 1.1rem;
+    margin-bottom: 40px;
+}
+
+.card {
+    background: var(--card-background);
+    border-radius: 12px;
+    padding: 25px;
+    margin: 30px auto;
+    max-width: 500px;
+    box-shadow: var(--card-shadow);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--card-hover-shadow);
+}
+
+h2 {
+    color: var(--h2-color);
+    margin-top: 0;
+    font-size: 1.5rem;
+}
+
+.card p {
+    color: var(--p-color);
+    margin-bottom: 20px;
+}
+
+.button {
+    display: inline-block;
+    background-color: var(--button-bg);
+    color: white;
+    padding: 12px 30px;
+    text-decoration: none;
+    border-radius: 30px;
+    font-weight: 600;
+    margin: 10px 0;
+    transition: all 0.3s;
+    box-shadow: 0 3px 10px rgba(79, 195, 247, 0.3);
+}
+
+.button:hover {
+    background-color: var(--button-hover-bg);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(79, 195, 247, 0.4);
+}
+
+.divider {
+    width: 100px;
+    height: 3px;
+    background: var(--divider-gradient);
+    margin: 50px auto;
+    border: none;
+}

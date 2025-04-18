@@ -9,9 +9,7 @@ const gamesList = [
   { id: "6142", title: "PolyTrack", category: "Racing", thumbnail: "/assets/img/applications-img/polytrack.png", url: "/g/polytrack/" },
   { id: "0812", title: "Indian Truck Driving", category: "Casual Driving", thumbnail: "/assets/img/applications-img/indian-truck-driving.png", url: "/g/indian-truck-driving/" },
   { id: "0811", title: "Slope", category: "Casual", thumbnail: "/assets/img/applications-img/slope.png", url: "/g/slope/" },
-  { id: "2817", title: "Ultimate Car Driving Simulator", category: "Casual Driving", thumbnail: "/assets/img/applications-img/ultimate-car-driving-simulator.png", url: "/g/ultimate-car-driving-simulator/" },
-  { id: "3683", title: "Discord", category: "Apps", thumbnail: "/assets/img/apps-img/discord.png", url: "/a/chat/" },
-  { id: "3682", title: "DownGit", category: "Apps", thumbnail: "/assets/img/apps-img/downgit.png", url: "/a/downgit/" },
+  { id: "2817", title: "Ultimate Car Driving Simulator", category: "Racing", thumbnail: "/assets/img/applications-img/ultimate-car-driving-simulator.png", url: "/g/ultimate-car-driving-simulator/" },
   { id: "3678", title: "Sky Riders", category: "Racing", thumbnail: "/assets/img/applications-img/sky-riders.png", url: "/g/sky-riders/" },
   { id: "3611", title: "Optric", category: "Puzzle", thumbnail: "/assets/img/applications-img/optric.png", url: "/g/optric/" },
   { id: "32400", title: "Granny Prison Escape", category: "Horror", thumbnail: "/assets/img/applications-img/granny-prison-escape.png", url: "/g/granny-prison-escape/" },
@@ -30,6 +28,14 @@ const gamesList = [
   { id: "519765", title: "House Painter", category: "Casual", thumbnail: "/assets/img/applications-img/house-painter.png", url: "/g/house-painter/" },
   { id: "519764", title: "Sling Drift", category: "Casual", thumbnail: "/assets/img/applications-img/sling-drift.png", url: "/g/sling-drift/" },
   { id: "519763", title: "Blacktop: Police Chase", category: "Casual Driving", thumbnail: "/assets/img/applications-img/blacktop-police-chase.png", url: "/g/blacktop-police-chase/" },
+  { id: "519762", title: "Subway Surfers", category: "Casual", thumbnail: "/assets/img/applications-img/subway-surfers.png", url: "/g/subway-surfers/" },
+  { id: "519761", title: "Drive Mad", category: "Casual", thumbnail: "/assets/img/applications-img/drive-mad.png", url: "/g/drive-mad/" },
+  
+  
+  //apps
+  { id: "3683", title: "Discord", category: "Apps", thumbnail: "/assets/img/apps-img/discord.png", url: "/a/chat/" },
+  { id: "3682", title: "DownGit", category: "Apps", thumbnail: "/assets/img/apps-img/downgit.png", url: "/a/downgit/" },
+  { id: "3681", title: "AI", category: "Apps", thumbnail: "/assets/img/apps-img/chatgpt.png", url: "/a/ai/" },
 ];
 
 function getFavorites() {

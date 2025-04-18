@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="styles.css" />
+    <title>Settings</title>
   </head>
   <body>
     <div class="container">
@@ -40,9 +41,7 @@
             <div class="template-buttons" id="templateButtons"></div>
             <div class="btn-group">
               <button id="saveFaviconTitle" class="btn-primary">Save</button>
-              <button id="resetFaviconTitle" class="btn-secondary">
-                Reset
-              </button>
+              <button id="resetFaviconTitle" class="btn-secondary">Reset</button>
             </div>
           </div>
         </div>
@@ -78,10 +77,35 @@
             <button id="anticloseToggle" class="btn-anticlose">OFF</button>
           </div>
         </div>
+
+        <div class="setting-item">
+          <div class="setting-info">
+            <h2>LocalStorage Manager</h2>
+            <p>Manage localStorage Data</p>
+          </div>
+          <div class="setting-control">
+            <select id="lsActionSelector">
+              <option value="download">Export localStorage JSON</option>
+              <option value="import">Import localStorage JSON</option>
+              <option value="delete">Delete localStorage Data</option>
+            </select>
+            <div
+              class="file-wrapper"
+              style="position: relative; min-height: 40px;"
+            >
+              <input
+                type="file"
+                id="lsImportFileInput"
+                style="display: none; position: absolute; top: 0; left: 0;"
+              />
+            </div>
+            <button id="lsActionButton" class="btn-primary">Execute</button>
+          </div>
+        </div>
       </main>
     </div>
 
-    <div class="tiny-text">V1.2.716.0922 BETA - 6ebdf</div>
+    <div class="tiny-text">V1.31.911.4133 BETA - 72ApL4 | SERVER PORT</div>
 
     <div id="resetPopup" class="popup-overlay">
       <div class="popup-content">
@@ -91,13 +115,36 @@
           Do Not Show Me This For 3 Days
         </label>
         <div class="popup-buttons">
-          <button id="popupConfirm" class="btn-primary-popup">
-            Yes, Reset
-          </button>
+          <button id="popupConfirm" class="btn-primary-popup">Yes, Reset</button>
           <button id="popupCancel" class="btn-secondary-popup">Cancel</button>
         </div>
       </div>
     </div>
+
+    <div
+      id="deletePopup"
+      class="popup-overlay"
+      style="display: none; justify-content: center; align-items: center;"
+    >
+      <div class="popup-content">
+        <p>Are you sure you want to delete your data?</p>
+        <p>⚠️ THIS WIL RESET ALL YOUR CURRENT SETTINGS ⚠️</p>
+        <p
+          id="dontShowDelete"
+          style="color: #ddd; text-decoration: underline; cursor: pointer;"
+        >
+          Don't show again
+        </p>
+        <div class="popup-buttons">
+          <button id="deleteConfirm" class="btn-primary-popup">
+            Yes, Delete
+          </button>
+          <button id="deleteCancel" class="btn-secondary-popup">Cancel</button>
+        </div>
+      </div>
+    </div>
+
+    <script src="data.js"></script>
     <script src="script.js"></script>
   </body>
 </html>

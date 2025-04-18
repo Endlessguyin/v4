@@ -23,35 +23,6 @@
   function updateTheme() {
     const savedTheme = localStorage.getItem("theme") || "light";
     document.documentElement.setAttribute("data-theme", savedTheme);
-
-    let existingOverride = document.getElementById("themeOverrideStyle");
-    if (existingOverride) {
-      existingOverride.parentNode.removeChild(existingOverride);
-    }
-
-    if (savedTheme === "dark") {
-      const styleOverride = document.createElement("style");
-      styleOverride.id = "themeOverrideStyle";
-      styleOverride.innerHTML = `
-        * {
-          color: var(--text-color, #cccccc) !important;
-        }
-        .search-input {
-          color: white !important;
-        }
-        .search-results {
-          background-color: #2c2c2c !important;
-          box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5) !important;
-        }
-        .search-result-item:hover {
-          background-color: #3d3d3d !important;
-        }
-        .search-result-category {
-          color: #aaaaaa !important;
-        }
-      `;
-      document.head.appendChild(styleOverride);
-    }
     updateLogos(savedTheme);
   }
 
