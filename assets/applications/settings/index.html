@@ -1,150 +1,208 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
+<head>
+  <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="styles.css" />
-    <title>Settings</title>
-  </head>
-  <body>
-    <div class="container">
-      <header>
-        <h1>Settings</h1>
-      </header>
-      <main class="settings-panel">
-        <div class="setting-item">
-          <div class="setting-info">
-            <h2>Website Theme</h2>
-            <p>Choose between Light or Dark mode</p>
-          </div>
-          <div class="setting-control">
-            <div class="theme-toggle">
-              <input type="radio" id="light" name="theme" value="light" />
-              <label for="light">Light</label>
-              <input type="radio" id="dark" name="theme" value="dark" />
-              <label for="dark">Dark</label>
-            </div>
-          </div>
+  <link rel="stylesheet" href="styles.css" />
+  <title>Settings</title>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Settings</h1>
+    </header>
+    <main class="settings-panel">
+      <div class="setting-item">
+        <div class="setting-info">
+          <h2>Website Theme</h2>
+          <p>Choose between Light or Dark mode</p>
         </div>
-
-        <div class="setting-item">
-          <div class="setting-info">
-            <h2>Website Cloaker</h2>
-            <p>
-              Cloak the website's favicon and title or enter a Favicon URL and Title
-              name.
-            </p>
-          </div>
-          <div class="setting-control">
-            <input type="text" id="faviconUrl" placeholder="Favicon URL" />
-            <input type="text" id="websiteTitle" placeholder="Website Title" />
-            <div class="template-buttons" id="templateButtons"></div>
-            <div class="btn-group">
-              <button id="saveFaviconTitle" class="btn-primary">Save</button>
-              <button id="resetFaviconTitle" class="btn-secondary">Reset</button>
-            </div>
-          </div>
-        </div>
-
-        <div class="setting-item">
-          <div class="setting-info">
-            <h2>Panic Keys</h2>
-            <p>
-              Define a key sequence (maximum 3 keys) and a URL to redirect when
-              activated.
-            </p>
-          </div>
-          <div class="setting-control">
+        <div class="setting-control">
+          <div class="theme-toggle">
             <input
-              type="text"
-              id="panicKeys"
-              placeholder="Press keys (e.g., Ctrl + I)"
+              type="radio"
+              id="light"
+              name="theme"
+              value="light"
             />
-            <input type="text" id="panicUrl" placeholder="Redirect URL" />
-            <div class="btn-group">
-              <button id="savePanicKeys" class="btn-primary">Save</button>
-              <button id="resetPanicKeys" class="btn-secondary">Reset</button>
-            </div>
+            <label for="light">Light</label>
+            <input
+              type="radio"
+              id="dark"
+              name="theme"
+              value="dark"
+            />
+            <label for="dark">Dark</label>
           </div>
-        </div>
-
-        <div class="setting-item">
-          <div class="setting-info">
-            <h2>Anticlose</h2>
-            <p>Prevent closing pages accidentally.</p>
-          </div>
-          <div class="setting-control">
-            <button id="anticloseToggle" class="btn-anticlose">OFF</button>
-          </div>
-        </div>
-
-        <div class="setting-item">
-          <div class="setting-info">
-            <h2>LocalStorage Manager</h2>
-            <p>Manage localStorage Data</p>
-          </div>
-          <div class="setting-control">
-            <select id="lsActionSelector">
-              <option value="download">Export localStorage JSON</option>
-              <option value="import">Import localStorage JSON</option>
-              <option value="delete">Delete localStorage Data</option>
-            </select>
-            <div
-              class="file-wrapper"
-              style="position: relative; min-height: 40px;"
-            >
-              <input
-                type="file"
-                id="lsImportFileInput"
-                style="display: none; position: absolute; top: 0; left: 0;"
-              />
-            </div>
-            <button id="lsActionButton" class="btn-primary">Execute</button>
-          </div>
-        </div>
-      </main>
-    </div>
-
-    <div class="tiny-text">V1.31.911.4133 BETA - 72ApL4 | SERVER PORT + Auto UPD</div>
-
-    <div id="resetPopup" class="popup-overlay">
-      <div class="popup-content">
-        <p>Are you sure you want to reset your setting?</p>
-        <label>
-          <input type="checkbox" id="popupDisableCheckbox" />
-          Do Not Show Me This For 3 Days
-        </label>
-        <div class="popup-buttons">
-          <button id="popupConfirm" class="btn-primary-popup">Yes, Reset</button>
-          <button id="popupCancel" class="btn-secondary-popup">Cancel</button>
         </div>
       </div>
-    </div>
 
-    <div
-      id="deletePopup"
-      class="popup-overlay"
-      style="display: none; justify-content: center; align-items: center;"
-    >
-      <div class="popup-content">
-        <p>Are you sure you want to delete your data?</p>
-        <p>⚠️ THIS WIL RESET ALL YOUR CURRENT SETTINGS ⚠️</p>
-        <p
-          id="dontShowDelete"
-          style="color: #ddd; text-decoration: underline; cursor: pointer;"
-        >
-          Don't show again
-        </p>
-        <div class="popup-buttons">
-          <button id="deleteConfirm" class="btn-primary-popup">
-            Yes, Delete
+      <div class="setting-item">
+        <div class="setting-info">
+          <h2>Website Cloaker</h2>
+          <p>
+            Cloak the website's favicon and title or enter a Favicon URL
+            and Title name.
+          </p>
+        </div>
+        <div class="setting-control">
+          <input
+            type="text"
+            id="faviconUrl"
+            placeholder="Favicon URL"
+          />
+          <input
+            type="text"
+            id="websiteTitle"
+            placeholder="Website Title"
+          />
+          <div class="template-buttons" id="templateButtons"></div>
+          <div class="btn-group">
+            <button id="saveFaviconTitle" class="btn-primary">
+              Save
+            </button>
+            <button id="resetFaviconTitle" class="btn-secondary">
+              Reset
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="setting-item">
+        <div class="setting-info">
+          <h2>Panic Keys</h2>
+          <p>
+            Define a key sequence (maximum 3 keys) and a URL to
+            redirect when activated.
+          </p>
+        </div>
+        <div class="setting-control">
+          <input
+            type="text"
+            id="panicKeys"
+            placeholder="Press keys (e.g., Ctrl + I)"
+          />
+          <input
+            type="text"
+            id="panicUrl"
+            placeholder="Redirect URL"
+          />
+          <div class="btn-group">
+            <button id="savePanicKeys" class="btn-primary">
+              Save
+            </button>
+            <button id="resetPanicKeys" class="btn-secondary">
+              Reset
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="setting-item">
+        <div class="setting-info">
+          <h2>Anticlose</h2>
+          <p>Prevent closing pages accidentally.</p>
+        </div>
+        <div class="setting-control">
+          <button id="anticloseToggle" class="btn-anticlose">
+            OFF
           </button>
-          <button id="deleteCancel" class="btn-secondary-popup">Cancel</button>
         </div>
       </div>
-    </div>
 
-    <script src="data.js"></script>
-    <script src="script.js"></script>
-  </body>
+      <div class="setting-item">
+        <div class="setting-info">
+          <h2>Data Manager</h2>
+          <p>Manage your localStorage or cookies.</p>
+        </div>
+        <div class="setting-control">
+          <select id="lsActionSelector">
+            <option value="download">
+              Export localStorage JSON
+            </option>
+            <option value="import">
+              Import localStorage JSON
+            </option>
+            <option value="delete">
+              Delete localStorage Data
+            </option>
+            <option value="exportCookies">
+              Export Cookies As JSON
+            </option>
+            <option value="importCookies">
+              Import Cookies As JSON
+            </option>
+          </select>
+          <div
+            class="file-wrapper"
+            style="position: relative; min-height: 40px;"
+          >
+            <input
+              type="file"
+              id="lsImportFileInput"
+              accept="application/json"
+              style="display: none; position: absolute;
+                top: 0; left: 0;"
+            />
+          </div>
+          <button id="lsActionButton" class="btn-primary">
+            Execute
+          </button>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <div class="tiny-text">
+    V1.31.911.4133 BETA - 72ApL4 | SERVER PORT
+  </div>
+
+  <div id="resetPopup" class="popup-overlay">
+    <div class="popup-content">
+      <p>Are you sure you want to reset your setting?</p>
+      <label>
+        <input type="checkbox" id="popupDisableCheckbox" />
+        Do Not Show Me This For 3 Days
+      </label>
+      <div class="popup-buttons">
+        <button id="popupConfirm" class="btn-primary-popup">
+          Yes, Reset
+        </button>
+        <button id="popupCancel" class="btn-secondary-popup">
+          Cancel
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <div
+    id="deletePopup"
+    class="popup-overlay"
+    style="display: none; justify-content: center;
+      align-items: center;"
+  >
+    <div class="popup-content">
+      <p>Are you sure you want to delete your data?</p>
+      <p>⚠️ THIS WILL RESET ALL YOUR CURRENT SETTINGS ⚠️</p>
+      <p
+        id="dontShowDelete"
+        style="color: #ddd; text-decoration: underline;
+          cursor: pointer;"
+      >
+        Don't show again
+      </p>
+      <div class="popup-buttons">
+        <button id="deleteConfirm" class="btn-primary-popup">
+          Yes, Delete
+        </button>
+        <button id="deleteCancel" class="btn-secondary-popup">
+          Cancel
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+  <script src="data.js"></script>
+</body>
 </html>
