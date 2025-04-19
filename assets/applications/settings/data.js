@@ -169,3 +169,13 @@ document
     setCookie("disableDeletePopup", "true", 365);
     this.style.color = "#bbb";
   });
+
+    document.getElementById("deletePopup").style.display = "none";
+  });
+
+document
+  .getElementById("dontShowDelete")
+  .addEventListener("click", function () {
+    setCookie("disableDeletePopup", "true", 365);
+    this.style.color = "#bbb";
+  });
