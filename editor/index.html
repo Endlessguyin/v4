@@ -2,23 +2,44 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta property="og:image" content="/assets/img/essential/icon.ico">
+  <meta property="og:image" content="/assets/img/essential/editor.ico">
+  <meta property="og:description"
+        content="Build, Learn, Share On Geometry Learn V4's Amazing HTML Editor!">
   <title>Geometry Learn V4 | Editor</title>
-  <link rel="icon" href="/assets/img/essential/icon.ico" type="image/x-icon" />
-  <link rel="shortcut icon" href="/assets/img/essential/editor.ico" type="image/x-icon" />
+
+  <link rel="icon"
+        href="/assets/img/essential/editor.ico"
+        type="image/x-icon" />
+  <link rel="shortcut icon"
+        href="/assets/img/essential/editor.ico"
+        type="image/x-icon" />
+
   <link rel="stylesheet" href="/editor/app.css" />
+  <style>
+    #s6-172 {
+      padding: 6px;
+      font-size: 12px;
+      text-align: center;
+      color: var(--text-col);
+      background: var(--sidebar-bg);
+      border-top: 1px solid var(--divider-col);
+      user-select: none;
+    }
+  </style>
 </head>
 <body>
   <div id="container">
     <div id="sidebar">
       <div id="fs-toolbar">
-        <button id="btn-file">+ File</button>
-        <button id="btn-folder">+ Folder</button>
-        <button id="btn-img">+ Img</button>
+        <button id="btn-file">Create File</button>
+        <button id="btn-folder">Create Folder</button>
+        <button id="btn-img">Upload IMG</button>
         <input type="file" id="uploader" accept="image/*" style="display:none"/>
       </div>
       <ul id="tree"></ul>
+      <div id="s6-172">© GLSeries 2025</div>
     </div>
+
     <div id="main">
       <div id="editor">
         <div id="ed-header">
@@ -45,9 +66,12 @@
     </div>
   </div>
 
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.0/jszip.min.js"
+  <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.0/jszip.min.js"
     integrity="sha512-4QZ8FdZcqLav5iY+IDYu1CglkjMd1UYHI9B+9lkMVcMKEFBgSOvX+v4KTXFAhVix3Y6xLZ4xq0K1ZCAHB7pWMA=="
-    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer">
+  </script>
   <script src="/editor/app.js"></script>
 </body>
 </html>
