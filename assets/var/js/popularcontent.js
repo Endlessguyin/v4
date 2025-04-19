@@ -30,12 +30,18 @@ const gamesList = [
   { id: "519763", title: "Blacktop: Police Chase", category: "Casual Driving", thumbnail: "/assets/img/applications-img/blacktop-police-chase.png", url: "/g/blacktop-police-chase/" },
   { id: "519762", title: "Subway Surfers", category: "Casual", thumbnail: "/assets/img/applications-img/subway-surfers.png", url: "/g/subway-surfers/" },
   { id: "519761", title: "Drive Mad", category: "Casual", thumbnail: "/assets/img/applications-img/drive-mad.png", url: "/g/drive-mad/" },
+  { id: "519760", title: "Skyblock 3D: Survival", category: "Survival", thumbnail: "/assets/img/applications-img/skyblock-3d.png", url: "/g/skyblock-3d/" },
+  { id: "519759", title: "Drag Racer V3", category: "Racing", thumbnail: "/assets/img/applications-img/drag-racer-v3.png", url: "/g/drag-racer-v3/" },
+  { id: "519758", title: "Rogue Within", category: "Survival", thumbnail: "/assets/img/applications-img/rogue-within.png", url: "/g/rogue-within/" },
+  { id: "519757", title: "Crossing The Pit", category: "Puzzle", thumbnail: "/assets/img/applications-img/crossing-the-pit.png", url: "/g/crossing-the-pit/" },
+  { id: "519756", title: "Breaking The Bank", category: "Puzzle", thumbnail: "/assets/img/applications-img/breaking-the-bank.png", url: "/g/breaking-the-bank/" },
   
   
   //apps
   { id: "3683", title: "Discord", category: "Apps", thumbnail: "/assets/img/apps-img/discord.png", url: "/a/chat/" },
   { id: "3682", title: "DownGit", category: "Apps", thumbnail: "/assets/img/apps-img/downgit.png", url: "/a/downgit/" },
   { id: "3681", title: "AI", category: "Apps", thumbnail: "/assets/img/apps-img/chatgpt.png", url: "/a/ai/" },
+  { id: "3680", title: "GLSeries HTML Editor", category: "Apps", thumbnail: "/assets/img/apps-img/html-editor.png", url: "/a/html-editor/" },
 ];
 
 function getFavorites() {
